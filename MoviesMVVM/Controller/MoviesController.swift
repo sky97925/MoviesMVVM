@@ -13,12 +13,15 @@
         @IBOutlet var tableView: UITableView!
         var dataSource = [MoviesCellModel]()
         let fetchMoviesService = FetchMoviesService()
-        override func viewDidLoad() {
+        
+        override func viewDidLoad()
+        {
             super.viewDidLoad()
             self.tableView.isHidden = true
             fetchAllMovies()
         }
-        override func viewWillAppear(_ animated: Bool) {
+        override func viewWillAppear(_ animated: Bool)
+        {
             activityIndicatorView.startAnimating()
         }
         
